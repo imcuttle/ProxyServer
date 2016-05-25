@@ -26,10 +26,7 @@ var server=require('http').createServer(function(req,res){
             proxy.web(req, res, { target: 'http://localhost:8080' });
             break;
         default:
-            res.writeHead(200, {
-                'Content-Type': 'text/plain'
-            });
-            res.end('Welcome to my proxy server!');
+            return;
     }
 });
 
