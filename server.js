@@ -16,10 +16,10 @@ var server=require('http').createServer(function(req,res){
     console.log(host);
     switch(host){
         case 'paintgame.moyuyc.xyz':
-            proxy.web(req,res,{target:'http://localhost:4001'});
+            proxy.web(req,res,{target:'http://localhost:4000'});
             break;
         case 'paint.moyuyc.xyz':
-            proxy.web(req, res, { target: 'http://localhost:4000' });
+            proxy.web(req, res, { target: 'http://localhost:4001' });
             break;
         case 'moyuyc.xyz':
             proxy.web(req, res, { target: 'http://localhost:8080' });
