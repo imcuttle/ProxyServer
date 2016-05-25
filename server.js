@@ -7,7 +7,9 @@ var proxy=require('http-proxy').createProxyServer({});
 proxy.on(function(err,req,res){
     res.writeHead(500,{'Content-Type':'text/plain'});
 });
-
+proxy.on('error', function(err, req, res) {
+    res.end();
+})
 var server=require('http').createServer(function(req,res){
 
     var host= req.headers.host;
